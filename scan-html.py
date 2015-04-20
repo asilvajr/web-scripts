@@ -35,7 +35,7 @@ class web_scan(object):
             links = soup.select('a[href^=http]')
             return [a.attrs.get('href') for a in links if a.attrs] 
         if scan_type=="internal-links":
-            links = soup.select('a[href^=http]')
+            links = soup.select('a[href^=/]')
             return [a.attrs.get('href') for a in links if a.attrs] 
 
 ws = web_scan()
